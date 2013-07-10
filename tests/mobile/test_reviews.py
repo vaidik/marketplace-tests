@@ -36,7 +36,7 @@ class TestReviews():
         # Write a review.
         review_box = details_page.click_write_review()
         details_page.login_with_user_from_other_pages(user="default")
-        import time; time.sleep(5)
+        import time; time.sleep(10)
         review_box.write_a_review(mock_review['rating'], mock_review['body'])
 
         Assert.equal(details_page.notification_message, "Your review was posted")
